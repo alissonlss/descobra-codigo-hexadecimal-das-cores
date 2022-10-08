@@ -1,0 +1,162 @@
+:root{
+    --color-bg-body: #ffffcc;
+    --color-bg-container: rgba(31, 156, 194, 0.3);
+    --color-text: #000;
+    --color-btn-h: rgb(220, 89, 7);
+}
+
+html{
+    /* 1rem será equivalente a 10px */
+    font-size: 62.5%; 
+}
+
+.dark-mode{
+    --color-bg-body: #c3ae25;
+    --color-bg-container: rgba(5, 111, 164, 0.5);
+    --color-text: #fff;
+}
+
+body{
+    background: var(--color-bg-body);
+    transition: background .2s linear;
+}
+
+.mudaTema {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.btnTema{
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+    appearance: none;
+    background-color: #c6c6c6;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(85, 85, 85, 0.2);
+    transition: .2s;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+input:checked[type="checkbox"] {
+    background-color: #000;
+}
+
+.btnTema::before {
+    content: '🌙';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: .2s;
+}
+
+input:checked[type="checkbox"]::before {
+    content: '☀️';
+    align-content: center;
+    left: 2rem;
+}
+
+.container{
+    background: var(--color-bg-container);
+    margin: 15vh 15vw;
+    padding: 5vh 5vw;
+    border-radius: 20px;
+    color: var(--color-text);
+}
+
+h1{
+    text-align: center;
+    color: var(--color-text);
+    font-size: 3rem;
+}
+
+.selecionaCor{
+    display: flex;
+    align-items: center;
+}
+
+.selecionaCor label{
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+.cor{
+    width: 8rem;
+    height: 4rem;
+    border-radius: 5px;
+}
+
+button{
+    margin-left: 2%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+button:hover{
+    color: var(--color-btn-h);
+    box-shadow: 0 0 0.3em var(--color-btn-h);
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result p{
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 1280px) {
+    html{
+        font-size: 70%; 
+    }
+}
+
+@media screen and (max-width: 720px) {
+    html{
+        font-size: 58%; 
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html{
+        font-size: 55%; 
+    }
+}
+
+@media screen and (max-width: 470px) {
+    html{
+        font-size: 50%; 
+    }
+}
+
+@media screen and (max-width: 430px) {
+    html{
+        font-size: 40%; 
+    }
+}
+
+@media screen and (max-width: 350px) {
+    html{
+        font-size: 35%; 
+    }
+}
+
+@media screen and (max-width: 300px) {
+    html{
+        font-size: 30%; 
+    }
+}
+
+@media screen and (max-width: 266px) {
+    html{
+        font-size: 25%; 
+    }
+}
